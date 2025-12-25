@@ -1,0 +1,218 @@
+  <style>
+        /* Stone Care Purple & Emerald Healthcare Theme */
+        :root,
+        [data-theme="stonecare"] {
+            /* Primary Deep Purple - Healthcare Authority */
+            --brand-primary: #6B46C1;
+            --brand-secondary: #8B5CF6;
+
+            /* Emerald Green - Healing & Wellness */
+            --brand-gold: #10B981;
+            --brand-gold-light: #D1FAE5;
+            --brand-gold-dark: #059669;
+
+            /* Supporting colors */
+            --brand-light: #F3E8FF;
+            --brand-muted: #C4B5FD;
+            --brand-accent: #4C1D95;
+
+            /* Background gradients - Premium healthcare */
+            --support-bg: #FAFAFA;
+            --support-bg-dark: #F3E8FF;
+
+            /* Text colors - Professional medical */
+            --text-dark: #4C1D95;
+            --text-light: #6B46C1;
+            --text-gold: #059669;
+
+            /* Healthcare specific colors */
+            --success-color: #10B981;
+            --warning-color: #F59E0B;
+            --danger-color: #EF4444;
+
+            /* Stone Care specific colors */
+            --stone-purple: #7C3AED;     /* Primary accent */
+            --stone-emerald: #10B981;    /* Healing green */
+            --stone-indigo: #6366F1;     /* Secondary accent */
+            --stone-teal: #14B8A6;       /* Supporting color */
+
+            /* Interactive states */
+            --accent: var(--brand-primary);
+            --muted: var(--brand-muted);
+        }
+
+        /* Stone Care Purple & Emerald Utility Classes */
+        .text-stone-purple { color: var(--stone-purple); }
+        .text-stone-emerald { color: var(--stone-emerald); }
+        .text-stone-indigo { color: var(--stone-indigo); }
+        .text-stone-teal { color: var(--stone-teal); }
+        
+        .bg-stone-purple { background-color: var(--stone-purple); }
+        .bg-stone-emerald { background-color: var(--stone-emerald); }
+        .bg-stone-indigo { background-color: var(--stone-indigo); }
+        .bg-stone-teal { background-color: var(--stone-teal); }
+
+        /* Brand Color Utility Classes */
+        .bg-brand-primary {
+            background-color: var(--brand-primary);
+        }
+
+        .bg-brand-secondary {
+            background-color: var(--brand-secondary);
+        }
+
+        .bg-brand-light {
+            background-color: var(--brand-light);
+        }
+
+        .bg-brand-gold {
+            background-color: var(--brand-gold);
+        }
+
+        .bg-brand-gold-light {
+            background-color: var(--brand-gold-light);
+        }
+
+        /* Text Colors */
+        .text-brand-primary {
+            color: var(--brand-primary);
+        }
+
+        .text-brand-secondary {
+            color: var(--brand-secondary);
+        }
+
+        .text-brand-light {
+            color: var(--brand-light);
+        }
+
+        .text-brand-accent {
+            color: var(--brand-accent);
+        }
+
+        .text-brand-gold {
+            color: var(--brand-gold);
+        }
+
+        .text-brand-gold-dark {
+            color: var(--brand-gold-dark);
+        }
+
+        .text-brand-gold-light {
+            color: var(--brand-gold-light);
+        }
+
+        /* Border Colors */
+        .border-brand-primary {
+            border-color: var(--brand-primary);
+        }
+
+        .border-brand-gold {
+            border-color: var(--brand-gold);
+        }
+
+        .border-brand-light {
+            border-color: var(--brand-light);
+        }
+
+        .border-success-color {
+            border-color: var(--success-color);
+        }
+
+        /* Success Color Utility Classes */
+        .text-success-color {
+            color: var(--success-color);
+        }
+
+        .bg-success-color {
+            background-color: var(--success-color);
+        }
+
+        /* Gradient Backgrounds - Purple & Emerald Healthcare */
+        .bg-gradient-ayurvani {
+            background: linear-gradient(135deg, var(--brand-primary) 0%, var(--stone-purple) 50%, var(--brand-gold) 100%);
+        }
+
+        .bg-gradient-natural {
+            background: linear-gradient(135deg, var(--support-bg) 0%, var(--brand-light) 50%, var(--brand-muted) 100%);
+        }
+
+        .bg-gradient-gold {
+            background: linear-gradient(135deg, var(--brand-gold-light) 0%, var(--brand-gold) 100%);
+        }
+
+        .bg-gradient-herbal {
+            background: linear-gradient(45deg, var(--stone-emerald) 0%, var(--stone-indigo) 100%);
+        }
+
+        /* Purple & Emerald Healthcare Shadows */
+        .shadow-ayurvani {
+            box-shadow: 0 8px 25px rgba(107, 70, 193, 0.15);
+        }
+
+        .shadow-gold {
+            box-shadow: 0 4px 15px rgba(16, 185, 129, 0.3);
+        }
+
+        .shadow-herbal {
+            box-shadow: 0 6px 20px rgba(124, 58, 237, 0.2);
+        }
+
+        /* Purple & Emerald Hover Effects */
+        .hover-lift:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 12px 30px rgba(107, 70, 193, 0.2);
+            transition: all 0.3s ease;
+        }
+
+        .hover-gold:hover {
+            background-color: var(--brand-gold-dark);
+            transform: scale(1.02);
+            transition: all 0.3s ease;
+        }
+
+        .hover-herbal:hover {
+            background: linear-gradient(45deg, var(--stone-purple) 0%, var(--stone-emerald) 100%);
+            transform: translateY(-1px);
+            transition: all 0.3s ease;
+        }
+
+        .font-eczar {
+            font-family: 'Eczar', serif;
+        }
+
+        .font-eczar {
+            font-family: 'eczar', sans-serif;
+        }
+
+        .font-yantra {
+            font-family: 'Yantramanav', sans-serif;
+        }
+
+        /* Container width control */
+        .main-container {
+            max-width: 450px;
+            margin: 0 auto;
+            margin-bottom: 60px;
+            width: 100%;
+            position: relative;
+        }
+
+        @media (min-width: 768px) {
+            .main-container {
+                max-width: 450px;
+            }
+        }
+
+        /* Mobile responsive */
+        @media (max-width: 450px) {
+            .main-container {
+                max-width: 100%;
+                margin-bottom: 20px;
+            }
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+    </style>

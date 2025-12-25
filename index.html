@@ -1,0 +1,812 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=eczar:wght@400;700&family=Eczar:wght@400..800&family=Hind:wght@300;400;500;600;700&family=Inknut+Antiqua:wght@300;400;500;600;700;800;900&family=Khula:wght@300;400;600;700;800&family=Yantramanav:wght@100;300;400;500;700;900&display=swap"
+        rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <title>Stone Care Capsules</title>
+    <style>
+        /* Stone Care Custom Color Palette Theme */
+        :root,
+        [data-theme="stonecare"] {
+            /* Custom Color Palette */
+            --brand-primary: #a25a3e;
+            /* Warm brown/rust */
+            --brand-secondary: #e5b264;
+            /* Light golden beige */
+
+            /* Golden yellows */
+            --brand-gold: #f3c04c;
+            /* Bright gold */
+            --brand-gold-light: #e5b264;
+            /* Light golden beige */
+            --brand-gold-dark: #a25a3e;
+            /* Darker brown */
+
+            /* Supporting colors */
+            --brand-light: #f9f4e8;
+            /* Very light cream */
+            --brand-muted: #e5b264;
+            /* Light golden beige */
+            --brand-accent: #2e2e2e;
+            /* Dark charcoal */
+
+            /* Background gradients */
+            --support-bg: #fefbf6;
+            --support-bg-dark: #f9f4e8;
+
+            /* Text colors */
+            --text-dark: #2e2e2e;
+            /* Dark charcoal */
+            --text-light: #a25a3e;
+            /* Warm brown */
+            --text-gold: #f3c04c;
+            /* Bright gold */
+
+            /* Status colors */
+            --success-color: #4a7c59;
+            --warning-color: #f3c04c;
+            --danger-color: #d63384;
+
+            /* Stone Care specific colors */
+            --stone-gold: #f3c04c;
+            /* Bright gold */
+            --stone-beige: #e5b264;
+            /* Light golden beige */
+            --stone-brown: #a25a3e;
+            /* Warm brown */
+            --stone-charcoal: #2e2e2e;
+            /* Dark charcoal */
+
+            /* Interactive states */
+            --accent: var(--brand-primary);
+            --muted: var(--brand-muted);
+        }
+
+        /* Stone Care Custom Palette Utility Classes */
+        .text-stone-gold {
+            color: var(--stone-gold);
+        }
+
+        .text-stone-beige {
+            color: var(--stone-beige);
+        }
+
+        .text-stone-brown {
+            color: var(--stone-brown);
+        }
+
+        .text-stone-charcoal {
+            color: var(--stone-charcoal);
+        }
+
+        .bg-stone-gold {
+            background-color: var(--stone-gold);
+        }
+
+        .bg-stone-beige {
+            background-color: var(--stone-beige);
+        }
+
+        .bg-stone-brown {
+            background-color: var(--stone-brown);
+        }
+
+        .bg-stone-charcoal {
+            background-color: var(--stone-charcoal);
+        }
+
+        /* Brand Color Utility Classes */
+        .bg-brand-primary {
+            background-color: var(--brand-primary);
+        }
+
+        .bg-brand-secondary {
+            background-color: var(--brand-secondary);
+        }
+
+        .bg-brand-light {
+            background-color: var(--brand-light);
+        }
+
+        .bg-brand-gold {
+            background-color: var(--brand-gold);
+        }
+
+        .bg-brand-gold-light {
+            background-color: var(--brand-gold-light);
+        }
+
+        /* Text Colors */
+        .text-brand-primary {
+            color: var(--brand-primary);
+        }
+
+        .text-brand-secondary {
+            color: var(--brand-secondary);
+        }
+
+        .text-brand-light {
+            color: var(--brand-light);
+        }
+
+        .text-brand-accent {
+            color: var(--brand-accent);
+        }
+
+        .text-brand-gold {
+            color: var(--brand-gold);
+        }
+
+        .text-brand-gold-dark {
+            color: var(--brand-gold-dark);
+        }
+
+        .text-brand-gold-light {
+            color: var(--brand-gold-light);
+        }
+
+        /* Border Colors */
+        .border-brand-primary {
+            border-color: var(--brand-primary);
+        }
+
+        .border-brand-gold {
+            border-color: var(--brand-gold);
+        }
+
+        .border-brand-light {
+            border-color: var(--brand-light);
+        }
+
+        .border-success-color {
+            border-color: var(--success-color);
+        }
+
+        /* Success Color Utility Classes */
+        .text-success-color {
+            color: var(--success-color);
+        }
+
+        .bg-success-color {
+            background-color: var(--success-color);
+        }
+
+        /* Gradient Backgrounds - Custom Palette */
+        .bg-gradient-ayurvani {
+            background: linear-gradient(135deg, var(--brand-primary) 0%, var(--stone-brown) 50%, var(--brand-gold) 100%);
+        }
+
+        .bg-gradient-natural {
+            background: linear-gradient(135deg, var(--support-bg) 0%, var(--brand-light) 50%, var(--brand-muted) 100%);
+        }
+
+        .bg-gradient-gold {
+            background: linear-gradient(135deg, var(--brand-gold-light) 0%, var(--brand-gold) 100%);
+        }
+
+        .bg-gradient-herbal {
+            background: linear-gradient(45deg, var(--stone-gold) 0%, var(--stone-beige) 100%);
+        }
+
+        /* Custom Palette Shadows */
+        .shadow-ayurvani {
+            box-shadow: 0 8px 25px rgba(162, 90, 62, 0.15);
+        }
+
+        .shadow-gold {
+            box-shadow: 0 4px 15px rgba(243, 192, 76, 0.3);
+        }
+
+        .shadow-herbal {
+            box-shadow: 0 6px 20px rgba(229, 178, 100, 0.2);
+        }
+
+        /* Custom Palette Hover Effects */
+        .hover-lift:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 12px 30px rgba(162, 90, 62, 0.2);
+            transition: all 0.3s ease;
+        }
+
+        .hover-gold:hover {
+            background-color: var(--brand-gold-dark);
+            transform: scale(1.02);
+            transition: all 0.3s ease;
+        }
+
+        .hover-herbal:hover {
+            background: linear-gradient(45deg, var(--stone-brown) 0%, var(--stone-gold) 100%);
+            transform: translateY(-1px);
+            transition: all 0.3s ease;
+        }
+
+        .font-eczar {
+            font-family: 'Eczar', serif;
+        }
+
+        .font-eczar {
+            font-family: 'eczar', sans-serif;
+        }
+
+        .font-yantra {
+            font-family: 'Yantramanav', sans-serif;
+        }
+
+        /* Container width control */
+        .main-container {
+            max-width: 450px;
+            margin: 0 auto;
+            margin-bottom: 60px;
+            width: 100%;
+            position: relative;
+        }
+
+        @media (min-width: 768px) {
+            .main-container {
+                max-width: 450px;
+            }
+        }
+
+        /* Mobile responsive */
+        @media (max-width: 450px) {
+            .main-container {
+                max-width: 100%;
+                margin-bottom: 20px;
+            }
+        }
+
+        /* FAQ Section Styles */
+        .faq-answer {
+            transition: max-height 0.5s ease-in-out;
+        }
+
+        .faq-answer-content {
+            transition: all 0.3s ease;
+        }
+
+        .faq-item.active .faq-answer {
+            max-height: 300px !important;
+        }
+
+        .faq-item.active .faq-icon {
+            transform: rotate(180deg);
+        }
+
+        .faq-item.active .faq-answer-content {
+            transform: translateY(0) !important;
+            opacity: 1 !important;
+        }
+
+        /* Confetti Animation */
+        @keyframes fall {
+            to {
+                transform: translateY(100vh) rotate(360deg);
+            }
+        }
+
+        /* Spin Wheel Animations */
+        @keyframes celebrate {
+
+            0%,
+            100% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.1);
+            }
+        }
+
+        .celebration-text {
+            animation: celebrate 1s ease-in-out infinite;
+        }
+    </style>
+</head>
+
+<body data-theme="stonecare"
+    class="font-eczar leading-relaxed text-brand-accent transition-all duration-500 bg-gradient-natural"
+    style="min-height: 100vh; background-attachment: fixed;">
+
+    <div class="w-full main-container">
+        <!-- Header -->
+        <!-- Simplified Header -->
+        <header
+            class="text-white w-full max-w-[450px] md:max-w-[450px] overflow-hidden relative bg-gradient-ayurvani shadow-herbal"
+            style="border-bottom: 3px solid var(--brand-gold); position: relative;">
+
+            <!-- Golden accent overlay matching product name -->
+            <div class="absolute top-0 left-0 right-0 h-1 bg-brand-gold opacity-95"></div>
+
+            <!-- Main Header Content -->
+            <div class="flex items-center justify-between gap-4 p-4">
+                <!-- Brand Section -->
+                <div class="flex items-center gap-3 flex-1">
+                    <!-- Brand Name -->
+                    <div class="font-eczar font-bold text-white drop-shadow-lg">
+                        <div class="text-2xl leading-tight">
+                            <span class="whitespace-nowrap">Stone Care</span>
+                            <!-- <span class="whitespace-nowrap ml-2">Capsule</span> -->
+                        </div>
+                        <div class="text-sm font-medium opacity-90 -mt-1">
+                            प्राकृतिक रूप से पथरी का समाधान
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Order Now Button -->
+                <div class="flex-shrink-0">
+                    <button style="background: linear-gradient(to right, #f3c04c, #e5b264); color: #2e2e2e;"
+                        class="font-black px-6 py-3 rounded-xl text-base shadow-lg transform hover:scale-105 transition-all duration-300 border-2 border-yellow-200"
+                        onclick="window.open('tel:+919876543210', '_self')">
+                        <div class="flex items-center gap-2">
+                            <span class="animate-bounce">🛒</span>
+                            <span>Order Now</span>
+                        </div>
+                    </button>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main style="background: transparent;">
+
+            <!-- Problem section  -->
+            <section class="relative py-12 px-4 overflow-hidden max-[450px]:py-8 max-[450px]:px-3"
+                     style="background: linear-gradient(135deg, #fff5e6 0%, #ffe4cc 100%);">
+                
+                <!-- Background Pattern -->
+                <div class="absolute inset-0 opacity-5" 
+                     style="background-image: radial-gradient(circle, #a25a3e 1px, transparent 1px); background-size: 20px 20px;"></div>
+
+                <!-- Section Header -->
+                <div class="text-center mb-8 max-[450px]:mb-6 relative z-10">
+                    <div class="inline-block bg-gradient-to-r from-red-500 to-orange-500 text-white px-6 py-2 rounded-full mb-3 shadow-lg max-[450px]:text-sm max-[450px]:px-4 max-[450px]:py-1.5">
+                        <span class="text-xl max-[450px]:text-base">🔶</span>
+                        <span class="font-bold ml-2">Pain Detailing / Problem Cause</span>
+                    </div>
+                    
+                    <!-- Main Problem Statement -->
+                    <div class="bg-white rounded-2xl shadow-2xl p-6 max-[450px]:p-4 mb-6 max-[450px]:mb-4 mx-auto max-w-3xl"
+                         style="border-left: 6px solid #ef4444;">
+                        <p class="text-lg max-[450px]:text-base text-stone-charcoal font-yantra leading-relaxed mb-4">
+                            अधिकतर लोग पथरी को तब पहचानते हैं जब <span class="font-bold text-red-600">दर्द सहन से बाहर हो जाता है</span>,
+                        </p>
+                        <div class="bg-gradient-to-r from-red-50 to-orange-50 rounded-xl p-4 max-[450px]:p-3 border-2 border-red-200">
+                            <p class="text-2xl max-[450px]:text-xl font-black text-red-800 font-eczar mb-2">
+                                लेकिन इस बीच शरीर के अंदर ये सब हो चुका होता है:
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Problem Cards Grid -->
+                <div class="max-w-5xl mx-auto relative z-10 space-y-4 max-[450px]:space-y-3">
+                    
+                    <!-- Problem 1 -->
+                    <div class="relative overflow-hidden rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-[1.02]"
+                         style="background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);">
+                        <div class="flex items-center gap-4 max-[450px]:gap-3 p-6 max-[450px]:p-4">
+                            <!-- Image Side -->
+                            <div class="flex-shrink-0 w-24 h-24 max-[450px]:w-20 max-[450px]:h-20 overflow-hidden rounded-xl shadow-lg"
+                                 style="clip-path: polygon(39% 17%, 100% 17%, 80% 79%, 59% 90%, 23% 85%, 6% 66%, 9% 34%);">
+                                <img src="./Image/Problem1.png" 
+                                     alt="Problem 1" 
+                                     class="w-full h-full object-cover">
+                            </div>
+                            
+                            <!-- Content Side -->
+                            <div class="flex-1 flex items-center gap-3 max-[450px]:gap-2">
+                                <div class="flex-shrink-0 bg-yellow-500 text-white w-10 h-10 max-[450px]:w-8 max-[450px]:h-8 rounded-full flex items-center justify-center font-black text-lg max-[450px]:text-base shadow-lg">
+                                    1
+                                </div>
+                                <div class="flex-1">
+                                    <p class="text-base max-[450px]:text-sm font-bold text-yellow-900 font-yantra">
+                                        कम पानी पीने से मिनरल्स जमा होना
+                                    </p>
+                                    <p class="text-xs max-[450px]:text-[10px] text-yellow-700 mt-0.5">
+                                        💧 Lack of water causes mineral buildup
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Problem 2 -->
+                    <div class="relative overflow-hidden rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-[1.02]"
+                         style="background: linear-gradient(135deg, #fed7aa 0%, #fdba74 100%);">
+                        <div class="flex items-center gap-4 max-[450px]:gap-3 p-6 max-[450px]:p-4">
+                            <!-- Content Side (reversed) -->
+                            <div class="flex-1 flex items-center gap-3 max-[450px]:gap-2">
+                                <div class="flex-shrink-0 bg-orange-500 text-white w-10 h-10 max-[450px]:w-8 max-[450px]:h-8 rounded-full flex items-center justify-center font-black text-lg max-[450px]:text-base shadow-lg">
+                                    2
+                                </div>
+                                <div class="flex-1">
+                                    <p class="text-base max-[450px]:text-sm font-bold text-orange-900 font-yantra">
+                                        किडनी / पेशाब की नली में धीरे-धीरे stone बनना
+                                    </p>
+                                    <p class="text-xs max-[450px]:text-[10px] text-orange-700 mt-0.5">
+                                        🪨 Stones form gradually in kidney & urinary tract
+                                    </p>
+                                </div>
+                            </div>
+                            
+                            <!-- Image Side (right) -->
+                            <div class="flex-shrink-0 w-24 h-24 max-[450px]:w-20 max-[450px]:h-20 overflow-hidden rounded-xl shadow-lg"
+                                 style="clip-path: polygon(39% 17%, 100% 17%, 80% 79%, 59% 90%, 23% 85%, 6% 66%, 9% 34%);">
+                                <img src="./Image/Problem2.png" 
+                                     alt="Problem 2" 
+                                     class="w-full h-full object-cover">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Problem 3 -->
+                    <div class="relative overflow-hidden rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-[1.02]"
+                         style="background: linear-gradient(135deg, #fecaca 0%, #fca5a5 100%);">
+                        <div class="flex items-center gap-4 max-[450px]:gap-3 p-6 max-[450px]:p-4">
+                            <!-- Image Side -->
+                            <div class="flex-shrink-0 w-24 h-24 max-[450px]:w-20 max-[450px]:h-20 overflow-hidden rounded-xl shadow-lg"
+                                 style="clip-path: polygon(39% 17%, 100% 17%, 80% 79%, 59% 90%, 23% 85%, 6% 66%, 9% 34%);">
+                                <img src="./Image/Problem3.png" 
+                                     alt="Problem 3" 
+                                     class="w-full h-full object-cover">
+                            </div>
+                            
+                            <!-- Content Side -->
+                            <div class="flex-1 flex items-center gap-3 max-[450px]:gap-2">
+                                <div class="flex-shrink-0 bg-red-500 text-white w-10 h-10 max-[450px]:w-8 max-[450px]:h-8 rounded-full flex items-center justify-center font-black text-lg max-[450px]:text-base shadow-lg">
+                                    3
+                                </div>
+                                <div class="flex-1">
+                                    <p class="text-base max-[450px]:text-sm font-bold text-red-900 font-yantra">
+                                        पेशाब में जलन, भारीपन या रुकावट
+                                    </p>
+                                    <p class="text-xs max-[450px]:text-[10px] text-red-700 mt-0.5">
+                                        🔥 Burning sensation, heaviness & blockage in urine
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Problem 4 -->
+                    <div class="relative overflow-hidden rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-[1.02]"
+                         style="background: linear-gradient(135deg, #fecdd3 0%, #fda4af 100%);">
+                        <div class="flex items-center gap-4 max-[450px]:gap-3 p-6 max-[450px]:p-4">
+                            <!-- Content Side (reversed) -->
+                            <div class="flex-1 flex items-center gap-3 max-[450px]:gap-2">
+                                <div class="flex-shrink-0 bg-rose-500 text-white w-10 h-10 max-[450px]:w-8 max-[450px]:h-8 rounded-full flex items-center justify-center font-black text-lg max-[450px]:text-base shadow-lg">
+                                    4
+                                </div>
+                                <div class="flex-1">
+                                    <p class="text-base max-[450px]:text-sm font-bold text-rose-900 font-yantra">
+                                        बार-बार pain attack और infection का खतरा
+                                    </p>
+                                    <p class="text-xs max-[450px]:text-[10px] text-rose-700 mt-0.5">
+                                        ⚡ Repeated pain attacks & infection risk
+                                    </p>
+                                </div>
+                            </div>
+                            
+                            <!-- Image Side (right) -->
+                            <div class="flex-shrink-0 w-24 h-24 max-[450px]:w-20 max-[450px]:h-20 overflow-hidden rounded-xl shadow-lg"
+                                 style="clip-path: polygon(39% 17%, 100% 17%, 80% 79%, 59% 90%, 23% 85%, 6% 66%, 9% 34%);">
+                                <img src="./Image/Problem4.png" 
+                                     alt="Problem 4" 
+                                     class="w-full h-full object-cover">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Problem 5 -->
+                    <div class="relative overflow-hidden rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-[1.02]"
+                         style="background: linear-gradient(135deg, #fee2e2 0%, #fecaca 100%);">
+                        <div class="flex items-center gap-4 max-[450px]:gap-3 p-6 max-[450px]:p-4">
+                            <!-- Image Side -->
+                            <div class="flex-shrink-0 w-24 h-24 max-[450px]:w-20 max-[450px]:h-20 overflow-hidden rounded-xl shadow-lg"
+                                 style="clip-path: polygon(39% 17%, 100% 17%, 80% 79%, 59% 90%, 23% 85%, 6% 66%, 9% 34%);">
+                                <img src="./Image/Problem5.png" 
+                                     alt="Problem 5" 
+                                     class="w-full h-full object-cover">
+                            </div>
+                            
+                            <!-- Content Side -->
+                            <div class="flex-1 flex items-center gap-3 max-[450px]:gap-2">
+                                <div class="flex-shrink-0 bg-red-600 text-white w-10 h-10 max-[450px]:w-8 max-[450px]:h-8 rounded-full flex items-center justify-center font-black text-lg max-[450px]:text-base shadow-lg">
+                                    5
+                                </div>
+                                <div class="flex-1">
+                                    <p class="text-base max-[450px]:text-sm font-bold text-red-900 font-yantra">
+                                        stone बढ़ने पर blockage या surgery की नौबत
+                                    </p>
+                                    <p class="text-xs max-[450px]:text-[10px] text-red-700 mt-0.5">
+                                        🏥 Growing stones lead to blockage or surgery
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Bottom Warning Section -->
+                <div class="mt-8 max-[450px]:mt-6 relative z-10">
+                    <div class="bg-gradient-to-r from-orange-500 via-red-500 to-orange-500 text-white rounded-2xl p-6 max-[450px]:p-4 shadow-2xl mx-auto max-w-3xl transform hover:scale-[1.02] transition-all duration-300"
+                         style="border: 4px solid white;">
+                        <div class="flex items-center gap-4 max-[450px]:gap-3">
+                            <div class="flex-shrink-0">
+                                <span class="text-5xl max-[450px]:text-4xl animate-pulse">👉</span>
+                            </div>
+                            <div class="flex-1">
+                                <p class="text-xl max-[450px]:text-lg font-black font-eczar leading-relaxed">
+                                    पथरी अचानक नहीं बनती—इसे समय रहते रोका जा सकता है।
+                                </p>
+                                <p class="text-sm max-[450px]:text-xs font-yantra opacity-90 mt-2">
+                                    Stones don't form overnight—they can be prevented in time!
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CTA Button -->
+                <div class="mt-6 max-[450px]:mt-4 text-center relative z-10">
+                    <button onclick="window.open('tel:+919876543210', '_self')"
+                            style="background: linear-gradient(to right, #f3c04c, #e5b264); color: #2e2e2e;"
+                            class="px-8 py-3 max-[450px]:px-6 max-[450px]:py-2.5 rounded-xl font-black text-lg max-[450px]:text-base shadow-lg transform hover:scale-105 transition-all duration-300 border-2 border-yellow-200">
+                        <div class="flex items-center gap-2 justify-center">
+                            <span class="animate-bounce">🛡️</span>
+                            <span>अभी समाधान पाएं</span>
+                            <span>→</span>
+                        </div>
+                    </button>
+                </div>
+
+            </section>
+             
+
+        </main>
+        <footer
+            class="bg-gradient-ayurvani text-white py-4 px-4 text-center max-[450px]:py-4 max-[450px]:px-3 pb-20 max-[450px]:pb-24 shadow-herbal"
+            style="border-top: 3px solid var(--brand-gold); position: relative;">
+
+            <!-- Golden accent line matching product -->
+            <div class="absolute top-0 left-0 right-0 h-1 bg-brand-gold opacity-90"></div>
+
+            <div class="text-sm mt-4 font-eczar max-[450px]:text-xs max-[450px]:mt-2 text-brand-gold-light"
+                style="text-shadow: 1px 1px 2px rgba(27, 67, 50, 0.5);">
+                <p><strong class="font-eczar text-brand-gold">⚠️ Disclaimer :-</strong>This product is not intended to
+                    diagnose, treat, cure, or prevent any disease. Results may vary from person to person. Always
+                    consult with a qualified healthcare professional before starting any new supplement.</p>
+            </div>
+        </footer>
+        <!-- Fixed CTA Form at Bottom -->
+        <div id="fixedCTA"
+            class="fixed bottom-0 left-1/2 transform -translate-x-1/2 z-50 bg-brand-primary shadow-2xl w-full max-w-[450px] md:max-w-[450px] border-t-4 border-brand-secondary">
+            <div class="px-2 py-3 w-full max-[450px]:px-2 max-w-screen-xl mx-auto">
+                <!-- Main Content: Centered Layout -->
+                <div class="flex flex-col items-center justify-between gap-3 max-[450px]:gap-4">
+                    <!-- Promotional Points -->
+                    <div
+                        class="flex justify-around items-center gap-10 text-white text-sm font-eczar font-bold max-[450px]:text-xs max-[450px]:gap-12">
+                        <span class="truncate">🔥 Today Offer <span class="text-xl" style="color: #f3c04c;">-> 10% OFF
+                            </span></span>
+                        <span class="truncate">📊 Free Diet Chart</span>
+                        <!-- <span class="truncate">💰 Free Cod Available</span> -->
+                    </div>
+
+                    <!-- Timer & Button Section -->
+                    <div class="flex items-center justify-between gap-15 max-[450px]:gap-18">
+                        <!-- Countdown Timer -->
+                        <div class="text-center">
+                            <div id="countdown"
+                                class="text-white text-lg max-[450px]:text-base font-extrabold font-eczar whitespace-nowrap flex items-center gap-1">
+                                <span class="animate-pulse">⏰</span>
+                                <span>00:00:00</span>
+                            </div>
+                            <p class="text-white text-xs font-bold font-eczar"
+                                style="opacity: 0.9;">
+                                Today Offer समाप्त होने में
+                            </p>
+                        </div>
+
+                        <!-- Order Button -->
+                        <button id="ctaButton" onclick="window.open('tel:+919876543210', '_self')"
+                            style="background: linear-gradient(to right, #f3c04c, #e5b264); color: #2e2e2e;"
+                            class="px-6 py-2.5 rounded-xl font-eczar font-bold text-base transition-all duration-300 shadow-lg hover:scale-105 hover:shadow-xl transform whitespace-nowrap  max-[450px]:px-4 max-[450px]:py-2">
+                            <span class="flex items-center gap-2">
+                                <span>🛒</span>
+                                <span>Order Now</span>
+                            </span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script>
+            // Spin Wheel Variables
+            let hasSpun = false;
+
+            // Main Spin Function
+            function performSpin() {
+                if (hasSpun) {
+                    alert('आपने पहले ही स्पिन कर लिया है! आपका 10% डिस्काउंट तैयार है!');
+                    return;
+                }
+
+                const wheel = document.getElementById('mainSpinWheel');
+                const spinButton = document.getElementById('mainSpinButton');
+
+                // Disable button during spin
+                spinButton.disabled = true;
+                spinButton.innerHTML = `
+                    <div class="flex items-center gap-3">
+                        <span class="text-2xl animate-spin">🎯</span>
+                        <span>स्पिन हो रहा है...</span>
+                        <span class="text-2xl animate-spin">💫</span>
+                    </div>
+                `;
+                spinButton.classList.remove('animate-pulse');
+
+                // Calculate rotation to land EXACTLY on 10% discount (90 degrees)
+                // 10% discount is at 90 degrees (60-120 degree segment)
+                const fullRotations = 5; // 5 full spins for effect
+                const targetAngle = 180; // Exact center of 10% segment
+                const finalRotation = (360 * fullRotations) + (360 - targetAngle);
+
+                // Apply the rotation
+                wheel.style.transform = `rotate(${finalRotation}deg)`;
+
+                // Show results after animation
+                setTimeout(() => {
+                    showSpinResult();
+                    hasSpun = true;
+
+                    // Update spin button to show completed state
+                    spinButton.innerHTML = `
+                        <div class="flex items-center gap-3">
+                            <span class="text-2xl">✅</span>
+                            <span>स्पिन पूरा हुआ!</span>
+                            <span class="text-2xl">🎉</span>
+                        </div>
+                    `;
+                    spinButton.disabled = true;
+                    spinButton.classList.add('opacity-70');
+
+                }, 3000);
+            }
+
+            // Show Spin Result
+            function showSpinResult() {
+                document.getElementById('spinResult').classList.remove('hidden');
+                document.getElementById('orderSection').classList.remove('hidden');
+
+                // Add confetti effect
+                createConfetti();
+
+                // Auto scroll to result after a short delay
+                setTimeout(() => {
+                    document.getElementById('spinResult').scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'center'
+                    });
+                }, 500);
+            }
+
+            // Scroll to Content Section
+            function scrollToContent() {
+                document.getElementById('contentSection').scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            }
+
+            // Create Enhanced Confetti Effect
+            function createConfetti() {
+                const colors = ['#f3c04c', '#e5b264', '#a25a3e', '#4ECDC4', '#FF6B6B', '#45B7D1'];
+
+                for (let i = 0; i < 50; i++) {
+                    setTimeout(() => {
+                        const confetti = document.createElement('div');
+                        confetti.style.position = 'fixed';
+                        confetti.style.left = Math.random() * 100 + '%';
+                        confetti.style.top = '-10px';
+                        confetti.style.width = (Math.random() * 8 + 5) + 'px';
+                        confetti.style.height = confetti.style.width;
+                        confetti.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
+                        confetti.style.zIndex = '1000';
+                        confetti.style.borderRadius = Math.random() > 0.5 ? '50%' : '0%';
+                        confetti.style.animation = `fall ${2 + Math.random() * 3}s linear forwards`;
+                        confetti.style.opacity = Math.random();
+
+                        document.body.appendChild(confetti);
+
+                        setTimeout(() => {
+                            if (confetti.parentNode) {
+                                confetti.remove();
+                            }
+                        }, 5000);
+                    }, i * 100);
+                }
+            }
+
+            // FAQ Toggle Function (if needed)
+            function toggleFAQ(button) {
+                const faqItem = button.parentElement;
+                const answer = faqItem.querySelector('.faq-answer');
+                const icon = faqItem.querySelector('.faq-icon');
+                const content = faqItem.querySelector('.faq-answer-content');
+
+                document.querySelectorAll('.faq-item').forEach(item => {
+                    if (item !== faqItem) {
+                        item.classList.remove('active');
+                        const otherAnswer = item.querySelector('.faq-answer');
+                        const otherIcon = item.querySelector('.faq-icon');
+                        const otherContent = item.querySelector('.faq-answer-content');
+
+                        if (otherAnswer && otherIcon && otherContent) {
+                            otherAnswer.style.maxHeight = '0px';
+                            otherIcon.textContent = '+';
+                            otherIcon.style.transform = 'rotate(0deg)';
+                            otherContent.style.opacity = '0';
+                            otherContent.style.transform = 'translateY(8px)';
+                        }
+                    }
+                });
+
+                if (faqItem.classList.contains('active')) {
+                    faqItem.classList.remove('active');
+                    answer.style.maxHeight = '0px';
+                    icon.textContent = '+';
+                    icon.style.transform = 'rotate(0deg)';
+                    content.style.opacity = '0';
+                    content.style.transform = 'translateY(8px)';
+                } else {
+                    faqItem.classList.add('active');
+                    answer.style.maxHeight = answer.scrollHeight + 'px';
+                    icon.textContent = '−';
+                    icon.style.transform = 'rotate(180deg)';
+
+                    setTimeout(() => {
+                        content.style.opacity = '1';
+                        content.style.transform = 'translateY(0)';
+                    }, 100);
+                }
+            }
+
+            // Countdown Timer Function
+            function updateCountdown() {
+                const now = new Date();
+                const tomorrow = new Date(now);
+                tomorrow.setDate(tomorrow.getDate() + 1);
+                tomorrow.setHours(0, 0, 0, 0);
+
+                const timeRemaining = tomorrow - now;
+                const hours = Math.floor(timeRemaining / (1000 * 60 * 60));
+                const minutes = Math.floor((timeRemaining % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((timeRemaining % (1000 * 60)) / 1000);
+
+                const formattedTime =
+                    String(hours).padStart(2, '0') + ':' +
+                    String(minutes).padStart(2, '0') + ':' +
+                    String(seconds).padStart(2, '0');
+
+                const countdownElement = document.getElementById('countdown');
+                if (countdownElement) {
+                    countdownElement.innerHTML = `<span class="animate-pulse">⏰</span> <span>${formattedTime}</span>`;
+                }
+            }
+
+            updateCountdown();
+            setInterval(updateCountdown, 1000);
+        </script>
+</body>
+
+</html>
