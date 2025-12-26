@@ -24,7 +24,7 @@
             /* Golden yellows */
             --brand-gold: #f3c04c;
             /* Bright gold */
-            --brand-gold-light: #e5b264;
+            --brand-gold-light: #f7ebda;
             /* Light golden beige */
             --brand-gold-dark: #a25a3e;
             /* Darker brown */
@@ -32,7 +32,7 @@
             /* Supporting colors */
             --brand-light: #f9f4e8;
             /* Very light cream */
-            --brand-muted: #e5b264;
+            --brand-muted: #f7f6f5;
             /* Light golden beige */
             --brand-accent: #2e2e2e;
             /* Dark charcoal */
@@ -72,6 +72,10 @@
         /* Stone Care Custom Palette Utility Classes */
         .text-stone-gold {
             color: var(--stone-gold);
+        }
+        
+        .text-brand-muted {
+            color: var(--brand-muted);
         }
 
         .text-stone-beige {
@@ -364,22 +368,21 @@
                     <!-- Hero Image Card -->
                     <div class="relative">
                         <!-- Image Container -->
-                        <img src="./Image/Hero1.png" alt="Stone Care - Ayurvedic Alternative to Surgery"
-                            class="w-full h-auto object-cover" </div>
-
+                        <img src="./Image/Hero1.avif" alt="Stone Care - Ayurvedic Alternative to Surgery"
+                            class="w-full h-auto object-cover"/>
                         <!-- Main Hook Content -->
-                        <div class="bg-white  shadow-herbal p-6 border-l-4 border-danger-color">
+                        <div class="bg-white  shadow-herbal p-2 border-l-4 border-danger-color">
 
                             <!-- Condition Statement -->
-                            <div class="mb-4">
-                                <p class="text-lg font-bold font-yantra text-brand-accent leading-relaxed">
+                            <div >
+                                <p class="text-3xl font-bold font-yantra text-brand-accent leading-relaxed text-center">
                                     <span class="text-danger-color text-xl">⚠️</span>
-                                    अगर <span class="text-danger-color font-extrabold">ultrasound report</span> में
-                                    stone आ चुका है
+                                    अगर <span class="text-danger-color font-extrabold">Ultrasound Report</span> में
+                                    Stone आ चुका है
                                 </p>
-                                <p class="text-lg font-bold font-yantra text-brand-accent leading-relaxed mt-2">
-                                    और doctor ने <span class="text-danger-color font-extrabold text-xl">surgery
-                                        suggest</span> कर दी है —
+                                <p class="text-3xl font-bold font-yantra text-brand-accent leading-relaxed mt-2 text-center">
+                                    और Doctor ने <span class="text-danger-color font-extrabold ">Surgery
+                                        Suggest</span> कर दी है —
                                 </p>
                             </div>
 
@@ -433,8 +436,11 @@
                                 <div
                                     class="inline-flex items-center gap-2 bg-gradient-gold px-5 py-3 rounded-full shadow-gold">
                                     <span class="text-2xl">👥</span>
-                                    <span class="text-sm font-bold font-eczar text-brand-accent">
-                                        78,000+ लोगों ने किया भरोसा
+                                    <span class="text-lg font-bold font-eczar text-brand-accent">
+                                        1 लाख + 
+                                    </span>
+                                      <span class="text-base font-bold font-eczar text-brand-accent">
+                                      लोगों ने किया भरोसा
                                     </span>
                                     <span class="text-2xl">✅</span>
                                 </div>
@@ -480,7 +486,7 @@
                             <!-- Image Side (Left) -->
                             <div class="flex-shrink-0 w-40 max-[450px]:w-44 overflow-hidden"
                                 style="clip-path: polygon(39% 17%, 100% 17%, 80% 79%, 59% 90%, 23% 85%, 6% 66%, 9% 34%);">
-                                <img src="./Image/Problem1.png" alt="Problem 1" class="w-full h-auto object-cover">
+                                <img src="./Image/Problem1.avif" alt="Problem 1" class="w-full h-auto object-cover">
                             </div>
 
                             <!-- Content Side -->
@@ -517,7 +523,7 @@
                             <!-- Image Side (Right) -->
                             <div class="flex-shrink-0 w-40 max-[450px]:w-44 overflow-hidden"
                                 style="clip-path: polygon(78% 11%, 97% 30%, 95% 63%, 79% 84%, 55% 87%, 30% 81%, 1% 16%);">
-                                <img src="./Image/Problem2.png" alt="Problem 2" class="w-full h-full object-cover">
+                                <img src="./Image/Problem2.avif" alt="Problem 2" class="w-full h-full object-cover">
                             </div>
                         </div>
                     </div>
@@ -530,7 +536,7 @@
                             <!-- Image Side (Left) -->
                             <div class="flex-shrink-0 w-40 max-[450px]:w-44 overflow-hidden"
                                 style="clip-path: polygon(39% 17%, 100% 17%, 80% 79%, 59% 90%, 23% 85%, 6% 66%, 9% 34%);">
-                                <img src="./Image/Problem3.png" alt="Problem 3" class="w-full h-full object-cover">
+                                <img src="./Image/Problem3.avif" alt="Problem 3" class="w-full h-full object-cover">
                             </div>
 
                             <!-- Content Side -->
@@ -567,7 +573,7 @@
                             <!-- Image Side (Right) -->
                             <div class="flex-shrink-0 w-40 max-[450px]:w-44 overflow-hidden"
                                 style="clip-path: polygon(78% 11%, 97% 30%, 95% 63%, 79% 84%, 55% 87%, 30% 81%, 1% 16%);">
-                                <img src="./Image/Problem4.png" alt="Problem 4" class="w-full h-full object-cover">
+                                <img src="./Image/Problem4.avif" alt="Problem 4" class="w-full h-full object-cover">
                             </div>
                         </div>
                     </div>
@@ -580,7 +586,7 @@
                             <!-- Image Side (Left) -->
                             <div class="flex-shrink-0 w-40 max-[450px]:w-44 overflow-hidden"
                                 style="clip-path: polygon(39% 17%, 100% 17%, 80% 79%, 59% 90%, 23% 85%, 6% 66%, 9% 34%);">
-                                <img src="./Image/Problem5.png" alt="Problem 5" class="w-full h-full object-cover">
+                                <img src="./Image/Problem5.avif" alt="Problem 5" class="w-full h-full object-cover">
                             </div>
                             <!-- Content Side -->
                             <div class="flex-1 flex items-center gap-3 max-[450px]:gap-2 p-6 max-[450px]:p-4">
@@ -669,7 +675,7 @@
 
                             <!-- Product Image -->
                             <div class="relative p-2">
-                                <img src="./Image/ProductShowcase.png"
+                                <img src="./Image/ProductShowCase.avif"
                                     alt="Stone Care Capsule - 100% Ayurvedic Solution"
                                     class="w-full h-auto object-contain drop-shadow-2xl transform group-hover:scale-105 transition-all duration-700 rounded-3xl"
                                     style="max-height: 400px; ">
@@ -699,28 +705,28 @@
                     <div
                         class="bg-white rounded-2xl shadow-herbal p-6 mb-6 border-l-4 border-brand-gold transform hover:scale-[1.01] transition-all duration-300">
                         <div class="text-center">
-                            <p class="text-xl font-bold font-yantra text-brand-primary mb-3 leading-relaxed">
-                                एक <span class="text-brand-gold text-2xl">100% Ayurvedic solution</span> जो
+                            <p class="text-2xl font-bold font-yantra text-brand-primary mb-3 leading-tight">
+                                एक <span class="text-brand-gold text-3xl">100% Ayurvedic solution</span> जो
                             </p>
-                            <ul class="text-lg font-medium font-yantra text-brand-accent space-y-2 text-left">
+                            <ul class="text-xl font-medium font-yantra text-brand-accent space-y-2 text-left">
                                 <li class="flex items-start gap-3">
-                                    <span class="text-2xl flex-shrink-0">✓</span>
+                                    <span class="text-3xl flex-shrink-0">✓</span>
                                     <span>पथरी को <strong class="text-brand-primary">जड़ से तोड़ने</strong> में मदद करता
                                         है</span>
                                 </li>
                                 <li class="flex items-start gap-3">
-                                    <span class="text-2xl flex-shrink-0">✓</span>
+                                    <span class="text-3xl flex-shrink-0">✓</span>
                                     <span>पथरी को <strong class="text-brand-primary">घोलने</strong> में सहायक</span>
                                 </li>
                                 <li class="flex items-start gap-3">
-                                    <span class="text-2xl flex-shrink-0">✓</span>
+                                    <span class="text-3xl flex-shrink-0">✓</span>
                                     <span>पथरी को <strong class="text-brand-primary">बाहर निकालने</strong> में
                                         प्रभावी</span>
                                 </li>
                             </ul>
                             <div class="mt-4 pt-4 border-t-2 border-brand-gold-light">
                                 <p
-                                    class="text-2xl font-extrabold font-eczar text-brand-gold-dark flex items-center justify-center gap-2">
+                                    class="text-3xl font-extrabold font-eczar text-brand-gold-dark flex items-center leading-10 justify-center gap-2">
                                     <span>🚫</span>
                                     <span>बिना दर्द, बिना सर्जरी</span>
                                     <span>🚫</span>
@@ -783,7 +789,7 @@
                         <div class="relative flex justify-between items-stretch">
                             <!-- Benefit Image -->
                             <div class="flex-shrink-0 w-44 max-[450px]:w-36 overflow-hidden">
-                                <img src="./Image/Benifit1.png" alt="Stone Break Action"
+                                <img src="./Image/Benifit1.avif" alt="Stone Break Action"
                                     class="w-full h-full object-cover">
                             </div>
 
@@ -816,7 +822,7 @@
                         <div class="relative flex items-stretch">
                             <!-- Benefit Image -->
                             <div class="flex-shrink-0 w-44 max-[450px]:w-36 overflow-hidden">
-                                <img src="./Image/Benifit2.png" alt="Flush Out Support"
+                                <img src="./Image/Benifit2.avif" alt="Flush Out Support"
                                     class="w-full h-full object-cover">
                             </div>
 
@@ -848,7 +854,7 @@
                         <div class="relative flex items-stretch">
                             <!-- Benefit Image -->
                             <div class="flex-shrink-0 w-44 max-[450px]:w-36 overflow-hidden">
-                                <img src="./Image/Benifit3.png" alt="Anti-Inflammation"
+                                <img src="./Image/Benifit3.avif" alt="Anti-Inflammation"
                                     class="w-full h-full object-cover">
                             </div>
 
@@ -880,7 +886,7 @@
                         <div class="relative flex items-stretch">
                             <!-- Benefit Image -->
                             <div class="flex-shrink-0 w-44 max-[450px]:w-36 overflow-hidden">
-                                <img src="./Image/Benifit4.png" alt="Recurrence Control"
+                                <img src="./Image/Benifit4.avif" alt="Recurrence Control"
                                     class="w-full h-full object-cover">
                             </div>
 
@@ -922,7 +928,7 @@
 
                 <!-- Section Header -->
                 <div class="text-center mb-10 max-[450px]:mb-6 relative z-10">
-                    <h2 class="text-4xl max-[450px]:text-3xl font-black text-brand-primary font-eczar mb-2">
+                    <h2 class="text-3xl max-[450px]:text-3xl font-extrabold text-brand-primary font-eczar mb-2">
                         Why Stone Care is Recommended?
                     </h2>
                     <p class="text-stone-brown font-yantra text-xl max-[450px]:text-lg">
@@ -1144,11 +1150,11 @@
                         <div class="flex items-start gap-3 max-[450px]:gap-2">
                             <span class="text-4xl max-[450px]:text-3xl flex-shrink-0">💡</span>
                             <div>
-                                <p class="text-white font-bold text-xl max-[450px]:text-lg font-eczar mb-2">
+                                <p class="text-white font-bold text-2xl max-[450px]:text-xl font-eczar mb-2">
                                     यही फर्क है Modern और Ayurveda में
                                 </p>
                                 <p
-                                    class="text-brand-gold-light font-yantra text-base max-[450px]:text-sm leading-relaxed">
+                                    class="text-brand-gold-light font-yantra text-2xl max-[450px]:text-xl leading-relaxed">
                                     Modern treatment सिर्फ दर्द को दबाता है, जबकि <strong class="text-white">Stone Care
                                         Capsule</strong>
                                     समस्या की जड़ को ख़त्म करके <strong class="text-white">permanent solution</strong>
@@ -1187,8 +1193,8 @@
                 <div class="absolute top-1/3 left-5 text-4xl opacity-10">🌾</div>
 
                 <!-- Section Header -->
-                <div class="text-center mb-8 relative z-10">
-                    <h2 class="text-3xl max-[450px]:text-2xl font-bold font-eczar mb-3 text-brand-gold-light">
+                <div class="text-center mb-4 relative z-10">
+                    <h2 class="text-3xl max-[450px]:text-2xl font-bold font-eczar mb-3 text-brand-muted">
                         🌿 प्राकृतिक जड़ी बूटियाँ
                     </h2>
                     <p class="text-lg max-[450px]:text-base font-eczar text-white opacity-95">
@@ -1196,7 +1202,7 @@
                     </p>
                     <div class="flex items-center justify-center gap-2 mt-3">
                         <span class="text-2xl">🍃</span>
-                        <span class="text-brand-gold-light font-bold">100% Natural & Safe</span>
+                        <span class="text-brand-light font-bold">100% Natural & Safe</span>
                         <span class="text-2xl">✨</span>
                     </div>
                 </div>
@@ -1211,7 +1217,7 @@
                             <!-- Image Section -->
                             <div class="w-32 h-32 max-[450px]:w-24 max-[450px]:h-24 flex-shrink-0 relative overflow-hidden"
                                 style="clip-path: polygon(0 0, 100% 0, 85% 100%, 0% 100%);">
-                                <img src="./Image/Ind1.png" alt="Punarnava" class="w-full h-full object-cover">
+                                <img src="./Image/Ind1.avif" alt="Punarnava" class="w-full h-full object-cover">
                                 <div class="absolute inset-0 bg-gradient-to-r from-green-500/30 to-transparent"></div>
                             </div>
                             <!-- Content -->
@@ -1243,7 +1249,7 @@
                             <!-- Image Section -->
                             <div class="w-32 h-32 max-[450px]:w-24 max-[450px]:h-24 flex-shrink-0 relative overflow-hidden order-2"
                                 style="clip-path: polygon(15% 0, 100% 0, 100% 100%, 0% 100%);">
-                                <img src="./Image/Ind2.png" alt="Gokshur" class="w-full h-full object-cover">
+                                <img src="./Image/Ind2.avif" alt="Gokshur" class="w-full h-full object-cover">
                                 <div class="absolute inset-0 bg-gradient-to-l from-blue-500/30 to-transparent"></div>
                             </div>
                         </div>
@@ -1256,7 +1262,7 @@
                             <!-- Image Section -->
                             <div class="w-32 h-32 max-[450px]:w-24 max-[450px]:h-24 flex-shrink-0 relative overflow-hidden"
                                 style="clip-path: polygon(0 0, 100% 0, 85% 100%, 0% 100%);">
-                                <img src="./Image/Ind3.png" alt="Varun" class="w-full h-full object-cover">
+                                <img src="./Image/Ind3.avif" alt="Varun" class="w-full h-full object-cover">
                                 <div class="absolute inset-0 bg-gradient-to-r from-yellow-500/30 to-transparent"></div>
                             </div>
                             <!-- Content -->
@@ -1288,7 +1294,7 @@
                             <!-- Image Section -->
                             <div class="w-32 h-32 max-[450px]:w-24 max-[450px]:h-24 flex-shrink-0 relative overflow-hidden order-2"
                                 style="clip-path: polygon(15% 0, 100% 0, 100% 100%, 0% 100%);">
-                                <img src="./Image/Ind4.png" alt="Kulthi" class="w-full h-full object-cover">
+                                <img src="./Image/Ind4.avif" alt="Kulthi" class="w-full h-full object-cover">
                                 <div class="absolute inset-0 bg-gradient-to-l from-orange-500/30 to-transparent"></div>
                             </div>
                         </div>
@@ -1301,7 +1307,7 @@
                             <!-- Image Section -->
                             <div class="w-32 h-32 max-[450px]:w-24 max-[450px]:h-24 flex-shrink-0 relative overflow-hidden"
                                 style="clip-path: polygon(0 0, 100% 0, 85% 100%, 0% 100%);">
-                                <img src="./Image/Ind5.png" alt="Pashanbhed" class="w-full h-full object-cover">
+                                <img src="./Image/Ind5.avif" alt="Pashanbhed" class="w-full h-full object-cover">
                                 <div class="absolute inset-0 bg-gradient-to-r from-purple-500/30 to-transparent"></div>
                             </div>
                             <!-- Content -->
@@ -1499,9 +1505,9 @@
                 <div class="absolute top-0 left-0 right-0 h-1 bg-brand-gold opacity-95"></div>
 
                 <!-- Section Header -->
-                <div class="text-center mb-8 relative z-10">
-                    <h2 class="text-3xl max-[450px]:text-2xl font-bold font-eczar mb-3 text-brand-gold-light">
-                        🔶 How to Use - कैसे उपयोग करें
+                <div class="text-center mb-4 relative z-10">
+                    <h2 class="text-3xl  font-bold font-eczar mb-2 text-brand-muted">
+                    कैसे उपयोग करें
                     </h2>
                     <p class="text-lg max-[450px]:text-base font-eczar text-white opacity-95">
                         सिर्फ 4 आसान स्टेप्स में पथरी से मुक्ति
@@ -1513,7 +1519,7 @@
 
                     <!-- Vertical Timeline Line -->
                     <div
-                        class="absolute left-8 max-[450px]:left-6 top-0 bottom-0 w-1 bg-gradient-to-b from-yellow-400 via-green-400 to-blue-400 rounded-full">
+                        class="absolute left-8 max-[450px]:left-6 top-0 bottom-0 w-1 bg-gradient-to-b from-yellow-400  via-green-400 to-blue-400 rounded-full">
                     </div>
 
                     <!-- Step 1: Dosage -->
@@ -1695,12 +1701,12 @@
                         class="absolute inset-4 rounded-full overflow-hidden transition-transform duration-[3000ms] ease-out shadow-xl"
                         style="background: conic-gradient(from 0deg, 
                             #FF6B6B 0deg 60deg,     /* Red - 15% OFF */
-                            #4ECDC4 60deg 120deg,   /* Teal - 10% OFF (WINNER) */
+                            #EF5350 60deg 120deg,   /* Red - TRY AGAIN */
                             #45B7D1 120deg 180deg,  /* Blue - 8% OFF */
                             #FFA726 180deg 240deg,  /* Orange - 5% OFF */
-                            #EF5350 240deg 300deg,  /* Red - Try Again */
+                            #4ECDC4 240deg 300deg,  /* Teal - 10% OFF (WINNER) */
                             #AB47BC 300deg 360deg   /* Purple - Better Luck */
-                        );">
+                        );");
 
                         <!-- Center Circle -->
                         <div class="absolute inset-0 flex items-center justify-center">
@@ -1716,17 +1722,17 @@
                             <div
                                 class="absolute top-1/2 left-1/2 w-32 h-1 origin-left transform -translate-y-1/2 rotate-[30deg]">
                                 <div
-                                    class="absolute left-16 top-1/2 transform -translate-y-1/2 -rotate-[30deg] text-center">
-                                    <div class="bg-black bg-opacity-50 px-2 py-1 rounded font-black">15% OFF</div>
+                                    class="absolute left-16 top-1/2 transform -translate-y-1/2 rotate-[30deg] text-center">
+                                    <div class="bg-black bg-opacity-50 px-2 py-1 rounded font-black transform rotate-180">15% OFF</div>
                                 </div>
                             </div>
 
-                            <!-- Segment 2: 10% OFF (60-120°) WINNER -->
+                            <!-- Segment 2: TRY AGAIN (60-120°) -->
                             <div
                                 class="absolute top-1/2 left-1/2 w-32 h-1 origin-left transform -translate-y-1/2 rotate-[90deg]">
                                 <div
-                                    class="absolute left-16 top-1/2 transform -translate-y-1/2 -rotate-[90deg] text-center">
-                                    <div class="bg-black bg-opacity-50 px-2 py-1 rounded font-black">10% OFF</div>
+                                    class="absolute left-16 top-1/2 transform -translate-y-1/2 rotate-[90deg] text-center">
+                                    <div class="bg-black bg-opacity-50 px-2 py-1 rounded font-black text-xs transform rotate-180">TRY AGAIN</div>
                                 </div>
                             </div>
 
@@ -1734,8 +1740,8 @@
                             <div
                                 class="absolute top-1/2 left-1/2 w-32 h-1 origin-left transform -translate-y-1/2 rotate-[150deg]">
                                 <div
-                                    class="absolute left-16 top-1/2 transform -translate-y-1/2 -rotate-[150deg] text-center">
-                                    <div class="bg-black bg-opacity-50 px-2 py-1 rounded font-black">8% OFF</div>
+                                    class="absolute left-16 top-1/2 transform -translate-y-1/2 rotate-[150deg] text-center">
+                                    <div class="bg-black bg-opacity-50 px-2 py-1 rounded font-black transform rotate-180">8% OFF</div>
                                 </div>
                             </div>
 
@@ -1743,18 +1749,17 @@
                             <div
                                 class="absolute top-1/2 left-1/2 w-32 h-1 origin-left transform -translate-y-1/2 rotate-[210deg]">
                                 <div
-                                    class="absolute left-16 top-1/2 transform -translate-y-1/2 -rotate-[210deg] text-center">
-                                    <div class="bg-black bg-opacity-50 px-2 py-1 rounded font-black">5% OFF</div>
+                                    class="absolute left-16 top-1/2 transform -translate-y-1/2 rotate-[210deg] text-center">
+                                    <div class="bg-black bg-opacity-50 px-2 py-1 rounded font-black transform rotate-180">5% OFF</div>
                                 </div>
                             </div>
 
-                            <!-- Segment 5: Try Again (240-300°) -->
+                            <!-- Segment 5: 10% OFF (240-300°) WINNER -->
                             <div
                                 class="absolute top-1/2 left-1/2 w-32 h-1 origin-left transform -translate-y-1/2 rotate-[270deg]">
                                 <div
-                                    class="absolute left-16 top-1/2 transform -translate-y-1/2 -rotate-[270deg] text-center">
-                                    <div class="bg-black bg-opacity-50 px-2 py-1 rounded font-black text-xs">TRY AGAIN
-                                    </div>
+                                    class="absolute left-16 top-1/2 transform -translate-y-1/2 rotate-[270deg] text-center">
+                                    <div class="bg-black bg-opacity-50 px-2 py-1 rounded font-black transform rotate-180">10% OFF</div>
                                 </div>
                             </div>
 
@@ -1762,8 +1767,8 @@
                             <div
                                 class="absolute top-1/2 left-1/2 w-32 h-1 origin-left transform -translate-y-1/2 rotate-[330deg]">
                                 <div
-                                    class="absolute left-16 top-1/2 transform -translate-y-1/2 -rotate-[330deg] text-center">
-                                    <div class="bg-black bg-opacity-50 px-2 py-1 rounded font-black text-xs">BETTER LUCK
+                                    class="absolute left-16 top-1/2 transform -translate-y-1/2 rotate-[330deg] text-center">
+                                    <div class="bg-black bg-opacity-50 px-2 py-1 rounded font-black text-xs transform rotate-180">BETTER LUCK
                                     </div>
                                 </div>
                             </div>
@@ -1821,7 +1826,7 @@
                 <!-- Section Header -->
                 <div class="text-center mb-4 relative z-10">
                     <div class="inline-flex items-center justify-center gap-3 ">
-                        <img src="./Image/Trust6.png" class="w-32" alt="">
+                        <img src="./Image/Trust6.avif" class="w-32" alt="">
                         <h2 class="text-3xl leading-12 font-black text-brand-primary font-eczar">
                             विश्वसनीय प्रमाणीकरण के साथ
                         </h2>
@@ -1840,7 +1845,7 @@
                                 <!-- Badge Image with Clip-path -->
                                 <div class="flex-shrink-0 w-24 h-24 max-[450px]:w-20 max-[450px]:h-20 overflow-hidden transform group-hover:scale-110 group-hover:rotate-3 transition-all duration-300"
                                     style="clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);">
-                                    <img src="./Image/Trust1.png" alt="FSSAI Certified"
+                                    <img src="./Image/Trust1.avif" alt="FSSAI Certified"
                                         class="w-full h-full object-cover">
                                 </div>
 
@@ -1874,7 +1879,7 @@
                                 <!-- Badge Image with Clip-path -->
                                 <div class="flex-shrink-0 w-24 h-24 max-[450px]:w-20 max-[450px]:h-20 overflow-hidden transform group-hover:scale-110 group-hover:rotate-3 transition-all duration-300"
                                     style="clip-path: circle(50% at 50% 50%);">
-                                    <img src="./Image/Trust2.png" alt="ISO Approved" class="w-full h-full object-cover">
+                                    <img src="./Image/Trust2.avif" alt="ISO Approved" class="w-full h-full object-cover">
                                 </div>
 
                                 <!-- Content -->
@@ -1906,7 +1911,7 @@
                                 <!-- Badge Image with Clip-path -->
                                 <div class="flex-shrink-0 w-24 h-24 max-[450px]:w-20 max-[450px]:h-20 overflow-hidden transform group-hover:scale-110 group-hover:rotate-3 transition-all duration-300"
                                     style="clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);">
-                                    <img src="./Image/Trust3.png" alt="GMP Manufacturing"
+                                    <img src="./Image/Trust3.avif" alt="GMP Manufacturing"
                                         class="w-full h-full object-cover">
                                 </div>
 
@@ -1940,7 +1945,7 @@
                                 <!-- Badge Image with Clip-path -->
                                 <div class="flex-shrink-0 w-24 h-24 max-[450px]:w-20 max-[450px]:h-20 overflow-hidden transform group-hover:scale-110 group-hover:rotate-3 transition-all duration-300"
                                     style="clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);">
-                                    <img src="./Image/Trust4.png" alt="100% Natural" class="w-full h-full object-cover">
+                                    <img src="./Image/Trust4.avif" alt="100% Natural" class="w-full h-full object-cover">
                                 </div>
 
                                 <!-- Content -->
@@ -1972,7 +1977,7 @@
                                 <!-- Badge Image with Clip-path -->
                                 <div class="flex-shrink-0 w-24 h-24 max-[450px]:w-20 max-[450px]:h-20 overflow-hidden transform group-hover:scale-110 group-hover:rotate-3 transition-all duration-300"
                                     style="clip-path: polygon(20% 0%, 80% 0%, 100% 20%, 100% 80%, 80% 100%, 20% 100%, 0% 80%, 0% 20%);">
-                                    <img src="./Image/Trust5.png" alt="No Side Effects"
+                                    <img src="./Image/Trust5.avif" alt="No Side Effects"
                                         class="w-full h-full object-cover">
                                 </div>
 
@@ -2083,7 +2088,7 @@
                         </h2>
                         <div class="mt-4 max-[450px]:mt-3">
                             <p
-                                class="text-lg max-[450px]:text-base font-eczar font-bold text-white bg-gradient-gold px-4 py-3 rounded-lg shadow-gold ring-2 ring-white/60 max-[450px]:px-3 max-[450px]:py-2 hover-herbal">
+                                class="text-lg max-[450px]:text-base font-eczar font-bold text-white bg-herbal px-4 py-3 rounded-lg shadow-gold ring-2 ring-white/60 max-[450px]:px-3 max-[450px]:py-2 hover-herbal">
                                 <span class="block text-xl max-[450px]:text-lg font-extrabold text-white">👉 और दर्द
                                     बढ़ने से पहले पथरी को जड़ से खत्म करें।</span>
                             </p>
@@ -2096,7 +2101,7 @@
                                 class="block mb-2 text-2xl max-[450px]:text-xl text-white font-eczar font-semibold max-[450px]:mb-1">आपका
                                 नाम:</label>
                             <input type="text" id="name" name="name" required placeholder="अपना नाम लिखें"
-                                class="w-full p-3 border-2 border-brand-gold rounded-lg text-lg font-bold text-brand-primary placeholder-gray-600 font-eczar max-[450px]:p-2 max-[450px]:text-base bg-brand-gold-light hover-lift focus:border-brand-gold-dark transition-all duration-300"
+                                class="w-full p-3 border-2 border-brand-gold rounded-lg text-lg font-bold text-brand-primary placeholder-brand-primary font-eczar max-[450px]:p-2 max-[450px]:text-base bg-brand-gold-light hover-lift focus:border-brand-gold-dark transition-all duration-300"
                                 style="box-shadow: 0 2px 10px rgba(255, 215, 0, 0.2);">
                         </div>
                         <div class="mb-4 max-[450px]:mb-3">
@@ -2104,7 +2109,7 @@
                                 class="block mb-2 text-2xl max-[450px]:text-xl text-white font-eczar font-semibold max-[450px]:mb-1">फोन
                                 नंबर:</label>
                             <input type="tel" id="phone" name="phone" required placeholder="अपना फोन नंबर लिखें"
-                                class="w-full p-3 border-2 border-brand-gold rounded-lg text-lg text-brand-primary font-bold placeholder-gray-600 font-eczar max-[450px]:p-2 max-[450px]:text-base bg-brand-gold-light hover-lift focus:border-brand-gold-dark transition-all duration-300"
+                                class="w-full p-3 border-2 border-brand-gold rounded-lg text-lg text-brand-primary font-bold placeholder-placeholder-brand-primary font-eczar max-[450px]:p-2 max-[450px]:text-base bg-brand-gold-light hover-lift focus:border-brand-gold-dark transition-all duration-300"
                                 style="box-shadow: 0 2px 10px rgba(255, 215, 0, 0.2);">
                         </div>
                         <button type="submit"
@@ -2148,7 +2153,7 @@
                             <div class="flex-shrink-0">
                                 <div
                                     class="w-20 h-20 max-[450px]:w-16 max-[450px]:h-16 rounded-full border-4 border-brand-gold overflow-hidden shadow-lg">
-                                    <img src="./Image/Customer1.png" alt="Ramesh Kumar"
+                                    <img src="./Image/Customer1.avif" alt="Ramesh Kumar"
                                         class="w-full h-full object-cover">
                                 </div>
                             </div>
@@ -2188,7 +2193,7 @@
                             <div class="flex-shrink-0">
                                 <div
                                     class="w-20 h-20 max-[450px]:w-16 max-[450px]:h-16 rounded-full border-4 border-brand-gold overflow-hidden shadow-lg">
-                                    <img src="./Image/Customer2.png" alt="Sunita Verma"
+                                    <img src="./Image/Customer2.avif" alt="Sunita Verma"
                                         class="w-full h-full object-cover">
                                 </div>
                             </div>
@@ -2228,7 +2233,7 @@
                             <div class="flex-shrink-0">
                                 <div
                                     class="w-20 h-20 max-[450px]:w-16 max-[450px]:h-16 rounded-full border-4 border-brand-gold overflow-hidden shadow-lg">
-                                    <img src="./Image/Customer3.png" alt="Anil Sharma"
+                                    <img src="./Image/Customer3.avif" alt="Anil Sharma"
                                         class="w-full h-full object-cover">
                                 </div>
                             </div>
@@ -2271,7 +2276,7 @@
                             <div class="flex items-center gap-2">
                                 <span class="text-4xl animate-bounce">🎖️</span>
                                 <div class="text-left">
-                                    <div class="text-2xl font-black">78,000+</div>
+                                    <div class="text-2xl font-black">1 लाख+</div>
                                     <div class="text-sm max-[450px]:text-xs font-semibold opacity-90">संतुष्ट ग्राहक
                                     </div>
                                 </div>
@@ -2424,9 +2429,9 @@
             <!-- Golden accent line matching product -->
             <div class="absolute top-0 left-0 right-0 h-1 bg-brand-gold opacity-90"></div>
 
-            <div class="text-sm mt-4 font-eczar max-[450px]:text-xs max-[450px]:mt-2 text-brand-gold-light"
+            <div class="text-[0.6rem] mt-4 font-eczar max-[450px]:text-[0.5rem] max-[450px]:mt-2 text-brand-gold-light"
                 style="text-shadow: 1px 1px 2px rgba(27, 67, 50, 0.5);">
-                <p><strong class="font-eczar text-brand-gold">⚠️ Disclaimer :-</strong>This product is not intended to
+                <p>⚠️ Disclaimer :- This product is not intended to
                     diagnose, treat, cure, or prevent any disease. Results may vary from person to person. Always
                     consult with a qualified healthcare professional before starting any new supplement.</p>
             </div>
@@ -2495,9 +2500,9 @@
                 spinButton.disabled = true;
                 spinButton.innerHTML = `
                     <div class="flex items-center gap-3">
-                        <span class="text-2xl animate-spin">🎯</span>
+                        <span class="text-2xl anime-bounce">🎯</span>
                         <span>स्पिन हो रहा है...</span>
-                        <span class="text-2xl animate-spin">💫</span>
+                        <span class="text-2xl anime-bounce">💫</span>
                     </div>
                 `;
                 spinButton.classList.remove('animate-pulse');
@@ -2505,7 +2510,7 @@
                 // Calculate rotation to land EXACTLY on 10% discount (90 degrees)
                 // 10% discount is at 90 degrees (60-120 degree segment)
                 const fullRotations = 5; // 5 full spins for effect
-                const targetAngle = 180; // Exact center of 10% segment
+                const targetAngle = 10; // Exact center of 10% segment
                 const finalRotation = (360 * fullRotations) + (360 - targetAngle);
 
                 // Apply the rotation
